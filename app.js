@@ -5,6 +5,7 @@ const cities = [];
 fetch(endpoint)
     .then(res => res.json())
     .then((data) => {cities.push(...data)})
+    .catch(err => console.log(err))
     
 
 function findMatches(wordToMatch, cities) {
